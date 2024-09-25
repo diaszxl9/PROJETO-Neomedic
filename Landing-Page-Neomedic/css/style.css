@@ -125,7 +125,7 @@ nav {
 #about {
     padding: 60px 20px;
     background-color: #dfdfdf;
-    text-align: left;
+    text-align: center;
 }
 
 #about h2 {
@@ -134,7 +134,70 @@ nav {
 
 #about p {
     font-size: 1.1rem;
-    max-width: 40%;
+    max-width: 110%;
+}
+
+/* Seção de Feedback */
+#feedback {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Cor de fundo branca, igual a seção #features */
+    text-align: center;
+}
+
+#feedback h2 {
+    font-size: 2rem; /* Mesma fonte usada para os títulos das seções */
+    color: #333; /* Cor de texto padrão */
+}
+
+.feedback-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra similar aos cartões */
+    border-radius: 8px; /* Bordas arredondadas para consistência */
+}
+
+.feedback-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.feedback-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+}
+
+.feedback-slide.active {
+    opacity: 1;
+}
+
+.feedback-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003366; /* Azul escuro, igual ao cabeçalho */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.feedback-button:hover {
+    background-color: #ff6666; /* Vermelho suave igual ao hover dos links de navegação */
+}
+
+.feedback-button:active {
+    transform: scale(0.95);
 }
 
 /* Seção de Depoimentos */

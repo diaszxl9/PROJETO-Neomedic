@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Neomedic SST</title> 
+    <link rel="shotcut icon" href="images/Neomedic - WhatsApp.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .feedback-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .feedback-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .feedback-slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .feedback-slide.active {
+            opacity: 1;
+        }
+
+        .feedback-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .feedback-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+               <img src="images/logo_neomedic-200x77.png" alt="Logo da empresa"> <h1> </h1>
+
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Nossos Serviços</a></li>
+                <li><a href="#about">Sobre</a></li>   
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Hero (destaque principal) -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2> Sua Parceira em Saúde e Segurança do Trabalho</h2>
+            <p>Especialistas em Saúde Ocupacional e Segurança no Trabalho para Empresas e Fazendas
+                Garantir um ambiente de trabalho seguro e saudável é essencial para o sucesso do seu negócio. 
+                Na nossa empresa, oferecemos soluções completas e personalizadas em saúde e segurança do trabalho, 
+                atendendo as necessidades de empresas de diferentes setores e propriedades rurais.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção de Funcionalidades -->
+    <section id="features">
+        <h2>Elaboração de Documentos Técnicos.</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h4>LTCAT (Laudo Técnico das Condições Ambientais do Trabalho):</h4>
+                <p>Análise das condições ambientais para definir a exposição dos trabalhadores a riscos.</p>
+            </div>
+            <div class="feature-card">
+                <h4>PCMSO (Programa de Controle Médico de Saúde Ocupacional):</h4>
+                <p>Planejamento e execução de exames e ações de saúde preventivas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>PGR (Programa de Gerenciamento de Riscos):</h3>
+                <p>Identificação, análise e controle de riscos no ambiente de trabalho.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>  Assessoria em Saúde e Segurança do Trabalho,
+            Fornecemos uma consultoria especializada para a adequação de sua empresa ou fazenda às exigências legais e normativas. 
+             Nossa equipe garante um suporte contínuo para que você esteja sempre em conformidade com a lei e com as novas ordens estabelecidas,
+             tendo a confiança de mais de 100 clientes nos nossos serviços de Saúde e Segurança no Trabalho.
+        </p>
+    </section>
+
+    <!-- Carrossel de Feedback -->
+    <section id="feedback">
+        <h2>Depoimentos de Clientes</h2>
+        <div class="feedback-container">
+            <div class="feedback-slide active">
+                <img src="images/Feedback.jpeg" alt="Depoimento 1">
+            </div>
+            <div class="feedback-slide">
+                <img src="images/Feedback-2.jpeg" alt="Depoimento 2">
+            </div>
+            <div class="feedback-slide">
+                <img src="images/Feedback.jpeg" alt="Depoimento 3">
+            </div>
+        </div>
+        <button class="feedback-button" id="next-feedback">Próximo Depoimento</button>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="testimonials">
+        <h2>Cumprimento Rigoroso das Normas</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>Estamos sempre atualizados com as legislações vigentes, garantindo que sua empresa 
+                    ou fazenda cumpra todas as exigências legais, evitando <u>multas</u> e <u>prejuízos.</u>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Chamada para Ação -->
+    <section id="cta">
+        <h2>Fale conosco!</h2>
+        <p>Precisa de suporte em saúde e segurança no trabalho? Entre em contato conosco agora mesmo 
+            e solicite um orçamento personalizado. Nossa equipe está pronta para atender sua empresa ou fazenda
+            com soluções ágeis e eficientes.
+        </p>
+        <br>
+        <a href="https://wa.me/556496644030" class="cta-button" target="_blank">Fale Conosco</a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Entre em Contato</h3>
+            <p>Email: neomedicsst@gmail.com</p>
+            <p>Telefone: (64) 99664-4030</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para o carrossel de feedback -->
+    <script>
+        const slides = document.querySelectorAll('.feedback-slide');
+        let currentSlide = 0;
+
+        document.getElementById('next-feedback').addEventListener('click', () => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        });
+    </script>
+</body>
+</html>
